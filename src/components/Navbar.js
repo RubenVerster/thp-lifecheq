@@ -20,24 +20,24 @@ const NavCustom = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md" style={{ zIndex: 999 }}>
+      <Navbar color="dark" dark expand="md" style={{ zIndex: 999, height: 65 }}>
         <NavbarBrand href="/"><img src='./src/img/logo.png' alt='' /> SPCA</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
+          <Nav color="light" className="ml-auto" navbar color="dark" dark>
+            <NavItem style={{ background: '#333' }}>
               <NavLink href="/admin">Admin</NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem style={{ background: '#333' }}>
               <NavLink href="/donate">Donate</NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem style={{ background: '#333' }}>
               <NavLink href="/adopt">Adopt</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
+    </div >
   );
 }
 

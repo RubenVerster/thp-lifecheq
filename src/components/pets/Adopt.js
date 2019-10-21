@@ -8,8 +8,6 @@ const Adopt = () => (
     <PetDetails id={'one'} />
     <PetDetails id={'two'} />
     <PetDetails id={'three'} />
-
-
   </div>
 );
 
