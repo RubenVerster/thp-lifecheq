@@ -20,34 +20,20 @@ const NavCustom = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar color="light" light expand="md" style={{ zIndex: 999 }}>
         <NavbarBrand href="/"><img src='./src/img/logo.png' alt='' /> SPCA</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="#">Components</NavLink>
+              <NavLink href="/admin">Admin</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/donate">Donate</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Adopt
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Cats
-                </DropdownItem>
-                <DropdownItem>
-                  Dogs
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Miscellaneous
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            <NavItem>
+              <NavLink href="/adopt">Adopt</NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>

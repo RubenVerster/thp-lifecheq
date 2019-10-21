@@ -1,24 +1,33 @@
 import React, { useState } from 'react';
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
+import { Collapse, Button, UncontrolledCollapse, CardBody, Card, Container, Row, Col } from 'reactstrap';
 
 const Example = (props) => {
+
   const [collapse, setCollapse] = useState(false);
 
   const toggle = () => setCollapse(!collapse);
 
   return (
     <div>
-      <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>Toggle</Button>
-      <Collapse isOpen={collapse}>
-        <Card>
-          <CardBody>
-            Anim pariatur cliche reprehenderit,
-             enim eiusmod high life accusamus terry richardson ad squid. Nihil
-             anim keffiyeh helvetica, craft beer labore wes anderson cred
-             nesciunt sapiente ea proident.
-          </CardBody>
-        </Card>
-      </Collapse>
+      < Container style={{ marginTop: 30 }
+      }>
+        <Row>
+          <Col >
+            <Button color="primary" id={`${props.id}`} style={{ marginBottom: '1rem' }}>
+              More About Me
+            </Button>
+            <UncontrolledCollapse toggler={`#${props.id}`}>
+              <Card>
+                <CardBody>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt magni, voluptas debitis
+                  similique porro a molestias consequuntur earum odio officiis natus, amet hic, iste sed
+                  dignissimos esse fuga! Minus, alias.
+              </CardBody>
+              </Card>
+            </UncontrolledCollapse>
+          </Col>
+        </Row>
+      </Container >
     </div>
   );
 }

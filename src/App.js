@@ -5,6 +5,8 @@ import Home from './components/Home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Dashboard from './components/admin/Dashboard'
 import Donate from './components/Donate'
+import Adopt from './components/pets/Adopt'
+
 class App extends Component {
   render() {
     return (
@@ -15,7 +17,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/admin" component={Dashboard} />
             <Route path="/donate" component={Donate} />
-            <Route path="/signup" component={Dashboard} />
+            <Route path="/adopt" component={Adopt} />
             <Route path="/create" component={Dashboard} />
           </Switch>
         </div>

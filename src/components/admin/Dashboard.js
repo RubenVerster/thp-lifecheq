@@ -9,12 +9,15 @@ const Home = () => {
     < Container style={{ marginTop: 30 }
     }>
       <Row>
-        <Col sm={{ size: 7, offset: 1 }}>
+        <Col sm={{ size: 7, offset: 0 }} style={{ background: 'pink' }}>
           <Feed />
           <h1>ADMIN HOME</h1>
         </Col>
-        <Col sm={{ size: 3, offset: 1 }}>
+        <Col sm={{ size: 4, offset: 1 }} style={{
+          background: 'pink'
+        }}>
           <Stats />
+          <h1>CRUD</h1>
         </Col>
       </Row>
     </Container >
