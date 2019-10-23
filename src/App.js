@@ -1,11 +1,12 @@
-import React, { Component } from 'react'; import './App.css';
-import NavCustom from './components/Navbar'
+import React, { Component } from 'react';
+import './App.css';
+import NavCustom from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Dashboard from './components/admin/Dashboard'
-import Donate from './components/Donate'
-import Adopt from './components/pets/Adopt'
+import Dashboard from './components/admin/Dashboard';
+import Donate from './components/Donate';
+import Adopt from './components/pets/Adopt';
 
 class App extends Component {
   render() {

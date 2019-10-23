@@ -5,40 +5,42 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavItem
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
-const NavCustom = (props) => {
+const NavCustom = props => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div>
-      <Navbar color="dark" dark expand="md" style={{ zIndex: 999, height: 65 }}>
-        <NavbarBrand href="/"><img src='./src/img/logo.png' alt='' /> SPCA</NavbarBrand>
+      <Navbar color="dark" dark expand="md" style={{ zIndex: 999, height: 70 }}>
+        <Nav>
+          <NavItem>
+            <Link to="/">
+              <img src="./src/img/logo.png" alt="" /> SPCA
+            </Link>
+          </NavItem>
+        </Nav>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav color="light" className="ml-auto" navbar color="dark" dark>
-            <NavItem style={{ background: '#333' }}>
-              <NavLink href="/admin">Admin</NavLink>
+            <NavItem>
+              <Link to="/admin">Admin</Link>
             </NavItem>
-            <NavItem style={{ background: '#333' }}>
-              <NavLink href="/donate">Donate</NavLink>
+            <NavItem>
+              <Link to="/donate">Donate</Link>
             </NavItem>
-            <NavItem style={{ background: '#333' }}>
-              <NavLink href="/adopt">Adopt</NavLink>
+            <NavItem>
+              <Link to="/adopt">Adopt</Link>
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
-    </div >
+    </div>
   );
-}
+};
 
 export default NavCustom;
