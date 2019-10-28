@@ -2,10 +2,25 @@ html,
 body {
   padding: 0;
   margin: 0;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff3030+0,ffb630+14,fff130+28,33ff30+41,30ffe3+54,2989d8+69,8d30ff+84,d789ff+99 */
+background: #ff3030; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #ff3030 0%, #ffb630 14%, #fff130 28%, #33ff30 41%, #30ffe3 54%, #2989d8 69%, #8d30ff 84%, #d789ff 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #ff3030 0%,#ffb630 14%,#fff130 28%,#33ff30 41%,#30ffe3 54%,#2989d8 69%,#8d30ff 84%,#d789ff 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #ff3030 0%,#ffb630 14%,#fff130 28%,#33ff30 41%,#30ffe3 54%,#2989d8 69%,#8d30ff 84%,#d789ff 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3030', endColorstr='#d789ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  max-width: 100vw
 }
-
+a { 
+  background: rgba(60,60,60,0.4) !important
+  
+}
 a:hover {
-  text-decoration: pink !important;
+  text-decoration: white !important;
   color: white !important;
-  background: orange !important;
-}
+background: #666 !important}
+

@@ -7,12 +7,13 @@ const Home = (props) => {
     < Container style={{ marginTop: 30 }
     }>
       <Row>
-        <Col sm={{ size: 7, offset: 1 }}>
+        <Col sm={{ size: 7, offset: 0 }} >
           <Feed />
-          <h1>HELLO FROM HOME</h1>
+          <h1> HOME</h1>
         </Col>
-        <Col sm={{ size: 3, offset: 1 }}>
+        <Col sm={{ size: 4, offset: 1 }} >
           <Stats />
+          <h1></h1>
         </Col>
       </Row>
     </Container >

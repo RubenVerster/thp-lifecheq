@@ -16,7 +16,7 @@ const NavCustom = props => {
 
   return (
     <div>
-      <Navbar color="dark" dark expand="md" style={{ zIndex: 999, height: 70 }}>
+      <Navbar color="dark" sticky dark expand="md" style={{ zIndex: 999, height: 70 }}>
         <Nav>
           <NavItem>
             <Link to="/">

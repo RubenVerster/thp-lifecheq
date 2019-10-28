@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Cat from '../../img/cat2.jpg';
+import Cat from '../../img/cat1.jpg';
 import {
   Button,
   UncontrolledCollapse,
@@ -31,7 +31,7 @@ const Example = props => {
               </CardImgOverlay>
             </Card>
             <Button
-              color="primary"
+              color="success"
               id={`${props.id}`}
               style={{ marginBottom: '1rem' }}
             >
