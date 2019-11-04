@@ -26,7 +26,9 @@ const Example = props => {
 
               <CardImgOverlay>
                 <CardTitle>
-                  <h1>Card Title</h1>
+                  <h1 style={{
+                    display: 'block', position: 'absolute', bottom: 5
+                  }}>Dingus Mackerel</h1>
                 </CardTitle>
               </CardImgOverlay>
             </Card>
@@ -62,7 +64,7 @@ const Example = props => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </div >
   );
 };
 

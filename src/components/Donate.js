@@ -1,13 +1,14 @@
 import React from 'react';
-import { Container, Row, Col, Card, CardBody, CardTitle } from 'reactstrap';
+
+import { Container, Row, Col, Card, CardBody, CardTitle, Progress } from 'reactstrap';
 const Home = () => {
   return (
     <Container style={{ marginTop: 30 }}>
       <Row>
         <Col>
-          <Card >
+          <Card className='text-center'>
             <CardTitle>
-              <h1 className='text-center'>DONATE</h1>
+              <h1>Donations</h1>
             </CardTitle>
             <CardBody>
               <form
@@ -34,11 +35,13 @@ const Home = () => {
                 />
               </form>
             </CardBody>
-
+            <CardBody>
+              <p>Donations For The Month</p>
+              <Progress value={66} color="success" />
+            </CardBody>
           </Card>
         </Col>
-        <Col>
-          <h1>Hi</h1></Col>
+
       </Row>
 
     </Container>

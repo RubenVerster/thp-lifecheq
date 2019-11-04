@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import Stats from './Stats'
-import Feed from './Feed'
-const Home = (props) => {
+import Stats from '../Stats'
+import Feed from '../Feed'
+import Donate from '../Donate'
+const Home = () => {
   return (
     < Container style={{ marginTop: 30 }
     }>
@@ -13,7 +14,7 @@ const Home = (props) => {
         </Col>
         <Col sm={{ size: 4, offset: 1 }} >
           <Stats />
-          <h1></h1>
+          <Donate />
         </Col>
       </Row>
     </Container >

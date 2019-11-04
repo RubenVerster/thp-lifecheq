@@ -3,7 +3,6 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem
 } from 'reactstrap';
@@ -29,9 +28,6 @@ const NavCustom = props => {
           <Nav color="light" className="ml-auto" navbar color="dark" dark>
             <NavItem>
               <Link to="/admin">Admin</Link>
-            </NavItem>
-            <NavItem>
-              <Link to="/donate">Donate</Link>
             </NavItem>
             <NavItem>
               <Link to="/adopt">Adopt</Link>
