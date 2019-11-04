@@ -1,24 +1,21 @@
-import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import Stats from '../Stats'
-import Feed from '../Feed'
-import Donate from '../Donate'
+import React from "react";
+import { Container, Row, Col } from "reactstrap";
+import Stats from "../Stats";
+import Donate from "../Donate";
 const Home = () => {
   return (
-    < Container style={{ marginTop: 30 }
-    }>
+    <Container style={{ marginTop: 30 }}>
       <Row>
-        <Col sm={{ size: 7, offset: 0 }} >
-          <Feed />
+        <Col sm={{ size: 7, offset: 0 }}>
           <h1> HOME</h1>
         </Col>
-        <Col sm={{ size: 4, offset: 1 }} >
+        <Col sm={{ size: 4, offset: 1 }}>
           <Stats />
           <Donate />
         </Col>
       </Row>
-    </Container >
+    </Container>
   );
-}
+};
 
 export default Home;

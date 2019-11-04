@@ -1,50 +1,53 @@
-import { Container, Row, Col } from 'reactstrap';
-import Stats from '../Stats'
-import Feed from '../Feed'
-import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import firebaseSetup from '../../config/FirebaseConfig'
-
-
+import { Container, Row, Col } from "reactstrap";
+import Stats from "../Stats";
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import firebaseSetup from "../../config/FirebaseConfig";
+import Login from "../layout/Login";
+import Logout from "../layout/Logout";
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       user: {}
-    }
+    };
   }
 
   componentDidMount() {
-    this.authListener()
+    this.authListener();
   }
 
   authListener() {
-    firebaseSetup.auth().onAuthStateChanged((user) => {
+    firebaseSetup.auth().onAuthStateChanged(user => {
       console.log(user);
       if (user) {
         this.setState({ user });
       } else {
-        this.setState({ user: null })
+        this.setState({ user: null });
       }
-    })
+    });
   }
 
   render() {
     return (
-      < Container style={{ marginTop: 30 }
-      }>
-        <Row>
-          <Col sm={{ size: 7, offset: 0 }} >
-            <Feed />
-            <h1>ADMIN HOME</h1>
-          </Col>
-          <Col sm={{ size: 4, offset: 1 }} >
-            <Stats />
-            <h1>CRUD</h1>
-          </Col>
-        </Row>
-      </Container >
+      <div>
+        {this.state.user ? (
+          <Container style={{ marginTop: 30 }}>
+            <Row>
+              <Col sm={{ size: 7, offset: 0 }}>
+                <h1>ADMIN HOME</h1>
+              </Col>
+              <Col sm={{ size: 4, offset: 1 }}>
+                <Stats />
+                <h1>CRUD</h1>
+                <Logout />
+              </Col>
+            </Row>
+          </Container>
+        ) : (
+          <Login />
+        )}
+      </div>
     );
   }
 }

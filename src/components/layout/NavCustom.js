@@ -1,12 +1,6 @@
-import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem
-} from 'reactstrap';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const NavCustom = props => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +9,13 @@ const NavCustom = props => {
 
   return (
     <div>
-      <Navbar color="dark" sticky dark expand="md" style={{ zIndex: 999, height: 70 }}>
+      <Navbar
+        color="dark"
+        sticky
+        dark
+        expand="md"
+        style={{ zIndex: 999, height: 70 }}
+      >
         <Nav>
           <NavItem>
             <Link to="/">

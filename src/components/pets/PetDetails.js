@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Cat from '../../img/cat1.jpg';
+import React, { useState } from "react";
+import Cat from "../../img/cat2.jpg";
 import {
   Button,
   UncontrolledCollapse,
@@ -10,7 +10,7 @@ import {
   Col,
   CardTitle,
   CardImgOverlay
-} from 'reactstrap';
+} from "reactstrap";
 
 const Example = props => {
   const [collapse, setCollapse] = useState(false);
@@ -26,19 +26,18 @@ const Example = props => {
 
               <CardImgOverlay>
                 <CardTitle>
-                  <h1 style={{
-                    display: 'block', position: 'absolute', bottom: 5
-                  }}>Dingus Mackerel</h1>
+                  <h1
+                    style={{
+                      display: "block",
+                      position: "absolute",
+                      bottom: 5
+                    }}
+                  >
+                    Dingus Mackerel
+                  </h1>
                 </CardTitle>
               </CardImgOverlay>
             </Card>
-            <Button
-              color="success"
-              id={`${props.id}`}
-              style={{ marginBottom: '1rem' }}
-            >
-              More About Me
-            </Button>
             <UncontrolledCollapse toggler={`#${props.id}`}>
               <Card>
                 <CardBody>
@@ -61,10 +60,17 @@ const Example = props => {
                 </CardBody>
               </Card>
             </UncontrolledCollapse>
+            <Button
+              color="success"
+              id={`${props.id}`}
+              style={{ marginBottom: "1rem" }}
+            >
+              More About Me
+            </Button>
           </Col>
         </Row>
       </Container>
-    </div >
+    </div>
   );
 };
 
