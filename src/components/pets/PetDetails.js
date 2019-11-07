@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Cat from "../../img/cat2.jpg";
+import React, { useState } from 'react';
+import Cat from '../../img/cat2.jpg';
 import {
   Button,
   UncontrolledCollapse,
@@ -10,7 +10,7 @@ import {
   Col,
   CardTitle,
   CardImgOverlay
-} from "reactstrap";
+} from 'reactstrap';
 
 const Example = props => {
   const [collapse, setCollapse] = useState(false);
@@ -28,8 +28,8 @@ const Example = props => {
                 <CardTitle>
                   <h1
                     style={{
-                      display: "block",
-                      position: "absolute",
+                      display: 'block',
+                      position: 'absolute',
                       bottom: 5
                     }}
                   >
@@ -42,19 +42,25 @@ const Example = props => {
               <Card>
                 <CardBody>
                   <Row>
-                    <Col sm={{ size: 5, offset: 1 }}>
+                    <Col lg={{ size: 6, offset: 1 }}>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Nesciunt magni, voluptas debitis similique porro a
                       molestias consequuntur earum odio officiis natus, amet
                       hic, iste sed dignissimos esse fuga! Minus, alias.HELLO
                       FROM HOME
                     </Col>
-                    <Col sm={{ size: 5, offset: 1 }}>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Nesciunt magni, voluptas debitis similique porro a
-                      molestias consequuntur earum odio officiis natus, amet
-                      hic, iste sed dignissimos esse fuga! Minus, alias.HELLO
-                      FROM HOME
+                    <Col
+                      lg={{ size: 4, offset: 1 }}
+                      style={{ textAlign: 'center' }}
+                    >
+                      <h3>Traits</h3>
+                      <ul>
+                        <li>Happy</li>
+                        <li>Happy</li>
+                        <li>Happy</li>
+                        <li>Happy</li>
+                        <li>Happy</li>
+                      </ul>
                     </Col>
                   </Row>
                 </CardBody>
@@ -63,7 +69,7 @@ const Example = props => {
             <Button
               color="success"
               id={`${props.id}`}
-              style={{ marginBottom: "1rem" }}
+              style={{ marginBottom: '1rem' }}
             >
               More About Me
             </Button>
