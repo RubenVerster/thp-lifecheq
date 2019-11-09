@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import firebaseSetup from "../../config/FirebaseConfig";
 import Login from "../layout/Login";
 import Logout from "../layout/Logout";
+import Crud from './Crud'
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -31,22 +32,22 @@ class Home extends Component {
   render() {
     return (
       <div>
+        {/* ternary operator to conditionally render admin or login */}
         {this.state.user ? (
           <Container style={{ marginTop: 30 }}>
             <Row>
               <Col sm={{ size: 7, offset: 0 }}>
-                <h1>ADMIN HOME</h1>
+                <Crud />
               </Col>
               <Col sm={{ size: 4, offset: 1 }}>
                 <Stats />
-                <h1>CRUD</h1>
                 <Logout />
               </Col>
             </Row>
           </Container>
         ) : (
-          <Login />
-        )}
+            <Login />
+          )}
       </div>
     );
   }

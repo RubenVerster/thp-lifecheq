@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardBody, CardTitle } from 'reactstrap';
 import { Link } from 'react-router-dom'
 const Stats = (props) => {
   props = {
@@ -18,7 +18,6 @@ const Stats = (props) => {
         <Link to="/adopt" style={{ padding: '8px', margin: '5px', color: 'white', fontSize: '1.5rem' }}>Adopt</Link>
       </CardBody>
     </Card>
-
   );
 };
 

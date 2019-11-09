@@ -25,7 +25,7 @@ const NavCustom = props => {
         </Nav>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav color="light" className="ml-auto" navbar color="dark" dark>
+          <Nav className="ml-auto" navbar color="dark" dark>
             <NavItem>
               <Link to="/admin">Admin</Link>
             </NavItem>
