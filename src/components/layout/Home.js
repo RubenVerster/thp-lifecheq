@@ -11,7 +11,6 @@ const Home = () => {
         </Col>
         <Col sm={{ size: 4, offset: 1 }}>
           <Stats />
-          <Donate />
         </Col>
       </Row>
     </Container>
