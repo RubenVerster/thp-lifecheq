@@ -37,11 +37,7 @@ class Home extends Component {
         {this.state.user ? (
           <Container style={{ marginTop: 30 }}>
             <Row>
-              <Col sm={{ size: 7, offset: 0 }}>
-                <CRUD />
-              </Col>
-              <Col sm={{ size: 4, offset: 1 }}>
-              </Col>
+              <CRUD />
             </Row>
           </Container>
         ) : (

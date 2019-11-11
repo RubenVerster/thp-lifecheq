@@ -15,7 +15,9 @@ import {
 } from 'reactstrap';
 import img from '../../img/cat1.jpg'
 import { FaMars, FaVenus } from 'react-icons/fa';
-import { petInput, PetInput } from './PetInput'
+import { PetInput } from './PetInput'
+import { PetCreate } from './PetCreate'
+
 
 const Adopt = (props) => {
   // collapse toggler for MoreAboutMe Button  
@@ -38,14 +40,14 @@ const Adopt = (props) => {
   return (
     <Container>
       <Row style={{ marginTop: 30 }}>
-        <Col sm={{ size: 5, offset: 0 }}>
+        <Col >
           <div>
             {pets.map(pet => (
               <PetInput pet={pet} />
             ))}
           </div>
         </Col>
-        <Col sm={{ size: 7, offset: 0 }}>
+        <Col >
           <div>
             {/* ternary operator to conditionally render admin or login */}
             {!pets ? (
@@ -115,6 +117,9 @@ const Adopt = (props) => {
               )}
           </div>
 
+        </Col>
+        <Col >
+          <PetCreate />
         </Col>
       </Row>
 
