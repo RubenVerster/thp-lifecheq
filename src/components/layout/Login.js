@@ -26,7 +26,7 @@ class Login extends Component {
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
       //not doing anything with the Promise, so empty objects yeah
-      .then(u => { })
+      .then(u => {})
       .catch(error => {
         alert(error);
       });
@@ -38,7 +38,7 @@ class Login extends Component {
       .auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password)
       //not doing anything with the Promise, so empty objects yeah
-      .then(u => { })
+      .then(u => {})
       .then(u => {
         console.log(u);
       })
@@ -49,42 +49,51 @@ class Login extends Component {
   }
   render() {
     return (
-      <Container style={{ marginTop: '50px' }}>
-        <Card style={{
-          padding: '25px', maxWidth: '450px', margin: '0 auto'
-        }}>
+      <Container style={{ marginTop: "50px" }}>
+        <Card
+          style={{
+            padding: "25px",
+            maxWidth: "450px",
+            margin: "0 auto"
+          }}
+        >
           <form>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
+              <label for="exampleinput requiredEmail1">Email address</label>
               <input
+                required
                 value={this.state.email}
                 onChange={this.handleChange}
                 type="email"
                 name="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="exampleinput requiredEmail1"
                 aria-describedby="emailHelp"
                 placeholder="Enter email"
               />
               <small id="emailHelp" class="form-text text-muted">
                 We'll never share your email with anyone else.
-            </small>
+              </small>
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
+              <label for="exampleinput requiredPassword1">Password</label>
               <input
+                required
                 value={this.state.password}
                 onChange={this.handleChange}
                 type="password"
                 name="password"
                 class="form-control"
-                id="exampleInputPassword1"
+                id="exampleinput requiredPassword1"
                 placeholder="Password"
               />
             </div>
             <div>
-
-              <button type="submit" onClick={this.login} class="btn btn-primary">
+              <button
+                type="submit"
+                onClick={this.login}
+                class="btn btn-primary"
+              >
                 Login
               </button>
               <button
@@ -96,7 +105,7 @@ class Login extends Component {
               </button>
             </div>
           </form>
-        </Card >
+        </Card>
       </Container>
     );
   }
