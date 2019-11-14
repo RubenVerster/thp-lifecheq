@@ -12,7 +12,7 @@ import {
   CardTitle,
   CardImgOverlay
 } from "reactstrap";
-import img from "../../img/cat1.jpg";
+import img from "../../img/cat2.jpg";
 import { FaMars, FaVenus } from "react-icons/fa";
 
 const Adopt = props => {
@@ -45,7 +45,7 @@ const Adopt = props => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
               magni, voluptas debitis similique porro a molestias consequuntur
               earum odio officiis natus, amet hic, iste sed dignissimos esse
-              fuga! Minus, alias.HELLO FROM HOME
+              fuga! Minus, alias.
             </CardBody>
           </Card>
           <Card>
@@ -53,7 +53,7 @@ const Adopt = props => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
               magni, voluptas debitis similique porro a molestias consequuntur
               earum odio officiis natus, amet hic, iste sed dignissimos esse
-              fuga! Minus, alias.HELLO FROM HOME
+              fuga! Minus, alias.
             </CardBody>
           </Card>
         </Col>

@@ -58,7 +58,7 @@ class Login extends Component {
           }}
         >
           <form>
-            <div class="form-group">
+            <div className="form-group">
               <label for="exampleinput requiredEmail1">Email address</label>
               <input
                 required
@@ -66,16 +66,16 @@ class Login extends Component {
                 onChange={this.handleChange}
                 type="email"
                 name="email"
-                class="form-control"
+                className="form-control"
                 id="exampleinput requiredEmail1"
                 aria-describedby="emailHelp"
                 placeholder="Enter email"
               />
-              <small id="emailHelp" class="form-text text-muted">
+              <small id="emailHelp" className="form-text text-muted">
                 We'll never share your email with anyone else.
               </small>
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <label for="exampleinput requiredPassword1">Password</label>
               <input
                 required
@@ -83,7 +83,7 @@ class Login extends Component {
                 onChange={this.handleChange}
                 type="password"
                 name="password"
-                class="form-control"
+                className="form-control"
                 id="exampleinput requiredPassword1"
                 placeholder="Password"
               />
@@ -92,7 +92,7 @@ class Login extends Component {
               <button
                 type="submit"
                 onClick={this.login}
-                class="btn btn-primary"
+                className="btn btn-primary"
               >
                 Login
               </button>

@@ -1,19 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import firebase from "firebase";
-import {
-  Button,
-  UncontrolledCollapse,
-  CardBody,
-  Card,
-  Container,
-  Row,
-  Col,
-  CardTitle,
-  CardImgOverlay
-} from "reactstrap";
-import img from "../../img/cat1.jpg";
-import { FaMars, FaVenus } from "react-icons/fa";
+import { Container, Row, Col } from "reactstrap";
 import { PetInput } from "./PetInput";
 import { PetCreate } from "./PetCreate";
 

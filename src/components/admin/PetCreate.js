@@ -3,15 +3,16 @@ import firebase from "firebase";
 import { Button, Card } from "reactstrap";
 
 export const PetCreate = ({ pet }) => {
-  const [newPetName, setNewPetName] = React.useState();
-  const [newPetDescription, setNewPetDescription] = React.useState();
-  const [newPetTrait1, setNewPetTrait1] = React.useState();
-  const [newPetTrait2, setNewPetTrait2] = React.useState();
-  const [newPetTrait3, setNewPetTrait3] = React.useState();
-  const [newPetSex, setNewPetSex] = React.useState();
+  let [newPetName, setNewPetName] = React.useState();
+  let [newPetDescription, setNewPetDescription] = React.useState();
+  let [newPetTrait1, setNewPetTrait1] = React.useState();
+  let [newPetTrait2, setNewPetTrait2] = React.useState();
+  let [newPetTrait3, setNewPetTrait3] = React.useState();
+  let [newPetSex, setNewPetSex] = React.useState();
 
   const onCreate = () => {
     const db = firebase.firestore();
+
     db.collection("pets").add({
       name: newPetName,
       description: newPetDescription,
@@ -25,7 +26,6 @@ export const PetCreate = ({ pet }) => {
     <Card style={{ padding: "15px" }}>
       <label>Name</label>
       <input
-        required
         value={newPetName}
         onChange={e => {
           setNewPetName(e.target.value);
@@ -43,7 +43,6 @@ export const PetCreate = ({ pet }) => {
 
       <label>Traits</label>
       <input
-        required
         value={newPetTrait1}
         onChange={e => {
           setNewPetTrait1(e.target.value);
@@ -51,7 +50,6 @@ export const PetCreate = ({ pet }) => {
         placeholder={"Trait 1"}
       />
       <input
-        required
         value={newPetTrait2}
         onChange={e => {
           setNewPetTrait2(e.target.value);
@@ -59,7 +57,6 @@ export const PetCreate = ({ pet }) => {
         placeholder={"Trait 2"}
       />
       <input
-        required
         value={newPetTrait3}
         onChange={e => {
           setNewPetTrait3(e.target.value);
@@ -68,7 +65,6 @@ export const PetCreate = ({ pet }) => {
       />
       <label>Sex</label>
       <input
-        required
         value={newPetSex}
         onChange={e => {
           setNewPetSex(e.target.value);

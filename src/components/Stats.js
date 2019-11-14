@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, CardBody, CardTitle, Col, Progress, Button } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Card, CardBody, CardTitle, Progress } from "reactstrap";
+
 const Stats = props => {
   props = {
     donations: 35,
@@ -25,7 +25,7 @@ const Stats = props => {
           <h1>Donations</h1>
         </CardTitle>
         <CardBody>
-          <h1>77</h1>
+          <h1>14</h1>
 
           <p>Donations For The Month</p>
           <Progress value={66} color="success" />

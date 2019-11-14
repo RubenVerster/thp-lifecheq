@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row } from "reactstrap";
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import firebaseSetup from "../../config/FirebaseConfig";
