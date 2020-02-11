@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import firebase from 'firebase';
 import { Container, Row, Col } from 'reactstrap';
-import { PetInput } from './PetInput';
-import { PetCreate } from './PetCreate';
+// import { MedActionInput } from 'medActionInput';
+// import { PetCreate } from 'PetCreate';
 import dummyData from '../../dummyActions.json';
-const Adopt = props => {
+
+const Crud = props => {
   // collapse toggler for MoreAboutMe Button
   const [collapse, setCollapse] = useState(false);
   const toggle = () => setCollapse(!collapse);
@@ -28,18 +29,19 @@ const Adopt = props => {
     <Container>
       <Row style={{ marginTop: 30 }}>
         <Col>
-          <div>
+          {/* <div>
             {medActions.map(action => (
-              <PetInput medAction={action} />
+              <MedActionInput medAction={action} />
             ))}
-          </div>
+          </div> */}
+          <h1>Eyo</h1>
         </Col>
-        <Col>
+        {/* <Col>
           <PetCreate />
-        </Col>
+        </Col> */}
       </Row>
     </Container>
   );
 };
 
-export default Adopt;
+export default Crud;

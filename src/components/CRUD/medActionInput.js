@@ -2,7 +2,7 @@ import React from 'react';
 import firebase from 'firebase';
 import { Button, Card, UncontrolledCollapse } from 'reactstrap';
 
-export const medActionInput = ({ medAction }) => {
+const medActionInput = ({ medAction }) => {
   const [name, setName] = React.useState(medAction.actionType);
 
   const onUpdate = () => {
@@ -24,3 +24,5 @@ export const medActionInput = ({ medAction }) => {
     </Card>
   );
 };
+
+export default medActionInput;

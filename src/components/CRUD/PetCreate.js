@@ -2,7 +2,7 @@ import React from 'react';
 import firebase from 'firebase';
 import { Button, Card } from 'reactstrap';
 
-export const PetCreate = ({ pet }) => {
+const PetCreate = ({ pet }) => {
   let [newPetName, setNewPetName] = React.useState();
   let [newPetDescription, setNewPetDescription] = React.useState();
   let [newPetTrait1, setNewPetTrait1] = React.useState();
@@ -76,3 +76,5 @@ export const PetCreate = ({ pet }) => {
     </Card>
   );
 };
+
+export default PetCreate;

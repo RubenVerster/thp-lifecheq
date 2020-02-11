@@ -2,9 +2,9 @@ import { Container, Row } from 'reactstrap';
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import firebaseSetup from '../../config/FirebaseConfig';
-import Login from '../layout/Login';
-import Logout from '../layout/Logout';
-import CRUD from './Crud';
+import Login from './Login';
+import Logout from './Logout';
+import CRUD from '../CRUD/Crud';
 
 class Home extends Component {
   constructor(props) {

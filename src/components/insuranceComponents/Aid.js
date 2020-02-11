@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import firebase from 'firebase';
 import { Container, Row, Col } from 'reactstrap';
-import { PetInput } from './PetInput';
-import { PetCreate } from './PetCreate';
+// import { PetInput } from '../CRUD/medActionInput';
+// import { PetCreate } from '../CRUD/PetCreate';
 import dummyData from '../../dummyActions.json';
 const Adopt = props => {
   // collapse toggler for MoreAboutMe Button
@@ -30,13 +30,11 @@ const Adopt = props => {
         <Col>
           <div>
             {medActions.map(action => (
-              <PetInput medAction={action} />
+              <h1 medAction={action}></h1>
             ))}
           </div>
         </Col>
-        <Col>
-          <PetCreate />
-        </Col>
+        <Col>{/* <PetCreate /> */}</Col>
       </Row>
     </Container>
   );
