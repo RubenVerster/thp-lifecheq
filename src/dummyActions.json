@@ -1,0 +1,40 @@
+{
+  "actions": {
+    "5d726440-a2cb-4d85-ac76-21a5295b002b": {
+      "total-premium": 1000,
+      "debit-order": {
+        "day": "1",
+        "amount": 10
+      },
+      "disability-cover": 1000000,
+      "disability-premium": 100,
+      "cover-start-date": "2019-09-25",
+      "income-protection-premium": 300,
+      "income-protection-cover": 3000000,
+      "critical-illness-cover": 2000000,
+      "critical-illness-premium": 200,
+      "label": "New Life Insurance",
+      "life-cover": 4000000,
+      "life-premium": 400,
+      "action-type": "new-life-insurance"
+    },
+    "5d03531f-7166-45ca-b484-b56907758b4f": {
+      "lump-sum-contribution": 20000,
+      "debit-order": {
+        "day": "1",
+        "amount": 1000
+      },
+      "title": "Open a new Unit Trust",
+      "fund-name": "Nedgroup Core Accelarated",
+      "start-month": "2019-07-01",
+      "action-type": "new-ut"
+    },
+    "5d55475b-5cd0-4917-a6d4-bc63608d9738": {
+      "label": "New medical aid",
+      "action-type": "new-medical-aid",
+      "ma-plan-option": "Discovery Coastal Core",
+      "rewards-program?": true,
+      "cover-start-date": "2019-08-16"
+    }
+  }
+}

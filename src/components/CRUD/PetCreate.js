@@ -1,6 +1,6 @@
-import React from "react";
-import firebase from "firebase";
-import { Button, Card } from "reactstrap";
+import React from 'react';
+import firebase from 'firebase';
+import { Button, Card } from 'reactstrap';
 
 export const PetCreate = ({ pet }) => {
   let [newPetName, setNewPetName] = React.useState();
@@ -13,7 +13,7 @@ export const PetCreate = ({ pet }) => {
   const onCreate = () => {
     const db = firebase.firestore();
 
-    db.collection("pets").add({
+    db.collection('actions').add({
       name: newPetName,
       description: newPetDescription,
       trait1: newPetTrait1,
@@ -23,21 +23,21 @@ export const PetCreate = ({ pet }) => {
     });
   };
   return (
-    <Card style={{ padding: "15px" }}>
+    <Card style={{ padding: '15px' }}>
       <label>Name</label>
       <input
         value={newPetName}
         onChange={e => {
           setNewPetName(e.target.value);
         }}
-        placeholder={"Name"}
+        placeholder={'Name'}
       />
       <label>Description</label>
       <textarea
         onChange={e => {
-          setNewPetDescription(e.target.value);
+          e.target.value;
         }}
-        placeholder={"Description"}
+        placeholder={'Description'}
         value={newPetDescription}
       ></textarea>
 
@@ -47,21 +47,21 @@ export const PetCreate = ({ pet }) => {
         onChange={e => {
           setNewPetTrait1(e.target.value);
         }}
-        placeholder={"Trait 1"}
+        placeholder={'Trait 1'}
       />
       <input
         value={newPetTrait2}
         onChange={e => {
           setNewPetTrait2(e.target.value);
         }}
-        placeholder={"Trait 2"}
+        placeholder={'Trait 2'}
       />
       <input
         value={newPetTrait3}
         onChange={e => {
           setNewPetTrait3(e.target.value);
         }}
-        placeholder={"Trait 3"}
+        placeholder={'Trait 3'}
       />
       <label>Sex</label>
       <input
@@ -69,7 +69,7 @@ export const PetCreate = ({ pet }) => {
         onChange={e => {
           setNewPetSex(e.target.value);
         }}
-        placeholder={"M / F"}
+        placeholder={'M / F'}
       />
 
       <Button onClick={onCreate}>Create</Button>

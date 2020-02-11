@@ -1,12 +1,14 @@
-import React, { Component } from "react";
-import "./App.css";
-import NavCustom from "./components/layout/NavCustom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./components/layout/Home";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Dashboard from "./components/admin/Dashboard";
-import Adopt from "./components/pets/Adopt";
-import firebaseSetup from "./config/FirebaseConfig";
+import React, { Component } from 'react';
+import './App.css';
+import NavCustom from './components/layout/NavCustom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Dashboard from './components/layout/Dashboard';
+import Life from './components/insuranceComponents/Life';
+import Trust from './components/insuranceComponents/Trust';
+import Aid from './components/insuranceComponents/Aid';
+
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import firebaseSetup from './config/FirebaseConfig';
 // import Login from "./components/layout/Login";
 
 class App extends Component {
@@ -38,9 +40,16 @@ class App extends Component {
         <div className="App">
           <NavCustom />
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/admin" component={Dashboard} />
-            <Route path="/adopt" component={Adopt} />
+            <Route exact path="/" component={Dashboard} />
+          </Switch>
+          <Switch>
+            <Route exact path="/life" component={Life} />
+          </Switch>
+          <Switch>
+            <Route exact path="/trust" component={Trust} />
+          </Switch>
+          <Switch>
+            <Route exact path="/aid" component={Aid} />
           </Switch>
         </div>
       </BrowserRouter>

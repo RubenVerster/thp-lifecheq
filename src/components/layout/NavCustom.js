@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 const NavCustom = props => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,10 +23,13 @@ const NavCustom = props => {
       <Collapse isOpen={isOpen} navbar onClick={toggle}>
         <Nav className="ml-auto" navbar color="dark" dark>
           <NavItem>
-            <Link to="/admin">Admin</Link>
+            <Link to="/life">Life</Link>
           </NavItem>
           <NavItem>
-            <Link to="/adopt">Adopt</Link>
+            <Link to="/aid">Aid</Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/trust">Trust</Link>
           </NavItem>
         </Nav>
       </Collapse>

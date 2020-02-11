@@ -2,13 +2,14 @@ import firebase from 'firebase'
 require('firebase/auth')
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB8US2gLl2W3QfLA4ofhw66E7eDSy2OnpQ",
-  authDomain: "adoption-portal.firebaseapp.com",
-  databaseURL: "https://adoption-portal.firebaseio.com",
-  projectId: "adoption-portal",
-  storageBucket: "adoption-portal.appspot.com",
-  messagingSenderId: "1073607543230",
-  appId: "1:1073607543230:web:86c6e094c0c7853bac51ef"
+  apiKey: "AIzaSyBPTHE19xM6vLjxHyNGgLVPtqw3xcWWTkk",
+  authDomain: "lifecheq-420.firebaseapp.com",
+  databaseURL: "https://lifecheq-420.firebaseio.com",
+  projectId: "lifecheq-420",
+  storageBucket: "lifecheq-420.appspot.com",
+  messagingSenderId: "155715305519",
+  appId: "1:155715305519:web:63e3ef2f0fca82ed3f06da",
+  measurementId: "G-569NP8D4SR"
 };
 
 const firebaseSetup = firebase.initializeApp(firebaseConfig)

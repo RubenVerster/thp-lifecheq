@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import firebase from "firebase";
-import { Container, Row, Col } from "reactstrap";
-import { PetInput } from "./PetInput";
-import { PetCreate } from "./PetCreate";
-
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import firebase from 'firebase';
+import { Container, Row, Col } from 'reactstrap';
+import { PetInput } from './PetInput';
+import { PetCreate } from './PetCreate';
+import dummyData from '../../dummyActions.json';
 const Adopt = props => {
   // collapse toggler for MoreAboutMe Button
   const [collapse, setCollapse] = useState(false);
@@ -12,12 +12,12 @@ const Adopt = props => {
 
   //check permissions in firestore
   //allow read and write access
-  const [pets, setPets] = React.useState([]);
+  const [medActions, setPets] = React.useState([]);
 
   React.useEffect(() => {
     const fetchData = async () => {
       const db = firebase.firestore();
-      const data = await db.collection("pets").get();
+      const data = await db.collection('actions').get();
       setPets(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
     };
 
@@ -29,8 +29,8 @@ const Adopt = props => {
       <Row style={{ marginTop: 30 }}>
         <Col>
           <div>
-            {pets.map(pet => (
-              <PetInput pet={pet} />
+            {medActions.map(action => (
+              <PetInput medAction={action} />
             ))}
           </div>
         </Col>
