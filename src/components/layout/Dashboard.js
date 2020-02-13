@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import firebaseSetup from '../../config/FirebaseConfig';
 import Login from './Login';
-import Logout from './Logout';
 import NavCustom from './NavCustom';
 import Aid from '../insuranceComponents/Aid';
 import Trust from '../insuranceComponents/Trust';
@@ -39,7 +38,6 @@ class Home extends Component {
         {this.state.user ? (
           <span>
             <NavCustom />
-
             <Container style={{ marginTop: 30 }}>
               <Aid />
               <Trust />

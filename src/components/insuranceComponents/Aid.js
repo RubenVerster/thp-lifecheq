@@ -4,7 +4,6 @@ import firebase from 'firebase';
 import { Container, Row, Col } from 'reactstrap';
 // import { PetInput } from '../CRUD/medActionInput';
 // import { PetCreate } from '../CRUD/PetCreate';
-import dummyData from '../../dummyActions.json';
 const Adopt = props => {
   // collapse toggler for MoreAboutMe Button
   const [collapse, setCollapse] = useState(false);
@@ -23,7 +22,6 @@ const Adopt = props => {
 
     fetchData();
   }, []);
-  console.log(dummyData);
   return (
     <Container>
       <Row style={{ marginTop: 30 }}>

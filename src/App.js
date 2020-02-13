@@ -3,9 +3,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Dashboard from './components/layout/Dashboard';
-import Life from './components/insuranceComponents/Life';
-import Trust from './components/insuranceComponents/Trust';
-import Aid from './components/insuranceComponents/Aid';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import firebaseSetup from './config/FirebaseConfig';

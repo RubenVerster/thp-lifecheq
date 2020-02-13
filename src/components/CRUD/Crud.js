@@ -4,7 +4,6 @@ import firebase from 'firebase';
 import { Container, Row, Col } from 'reactstrap';
 // import { MedActionInput } from 'medActionInput';
 // import { PetCreate } from 'PetCreate';
-import dummyData from '../../dummyActions.json';
 
 const Crud = props => {
   // collapse toggler for MoreAboutMe Button
