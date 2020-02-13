@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import Logout from '../layout/Logout';
+
 const NavCustom = props => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,21 +17,13 @@ const NavCustom = props => {
       style={{ zIndex: 999, height: 70 }}
     >
       <Nav>
-        <NavItem>
-          <Link to="/">SPCA</Link>
-        </NavItem>
+        <NavItem>Service Catalogue</NavItem>
       </Nav>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar onClick={toggle}>
         <Nav className="ml-auto" navbar color="dark" dark>
           <NavItem>
-            <Link to="/life">Life</Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/aid">Aid</Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/trust">Trust</Link>
+            <Logout />
           </NavItem>
         </Nav>
       </Collapse>

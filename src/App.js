@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import NavCustom from './components/layout/NavCustom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Dashboard from './components/layout/Dashboard';
 import Life from './components/insuranceComponents/Life';
 import Trust from './components/insuranceComponents/Trust';
@@ -38,18 +38,8 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <NavCustom />
           <Switch>
             <Route exact path="/" component={Dashboard} />
-          </Switch>
-          <Switch>
-            <Route exact path="/life" component={Life} />
-          </Switch>
-          <Switch>
-            <Route exact path="/trust" component={Trust} />
-          </Switch>
-          <Switch>
-            <Route exact path="/aid" component={Aid} />
           </Switch>
         </div>
       </BrowserRouter>
