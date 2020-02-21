@@ -2,7 +2,14 @@ import React, { useState, setState, Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import firebase from 'firebase';
 // import { LifeCrud } from '../CRUD/Crud';
-import { Row, Card, Col, Button } from 'reactstrap';
+import {
+  Row,
+  Card,
+  Col,
+  Button,
+  UncontrolledCollapse,
+  CardBody
+} from 'reactstrap';
 import InsuranceActionInput from '../CRUD/InsuranceActionInput';
 
 const LifeActionCreate = () => {
@@ -36,19 +43,17 @@ const LifeActionCreate = () => {
   };
 
   return (
-    <Card style={{ padding: '15px' }}>
-      <form onSubmit={onCreate}>
-        <label>Name</label>
-        <input
-          value={newLifeActionLabel}
-          onChange={e => {
-            setNewLifeActionLabel(e.target.value);
-          }}
-          placeholder={'Name'}
-        />
-        <Button onClick={onCreate}>Create</Button>
-      </form>
-    </Card>
+    <form onSubmit={onCreate}>
+      <label>Name</label>
+      <input
+        value={newLifeActionLabel}
+        onChange={e => {
+          setNewLifeActionLabel(e.target.value);
+        }}
+        placeholder={'Name'}
+      />
+      <Button onClick={onCreate}>Create</Button>
+    </form>
   );
 };
 
@@ -74,7 +79,7 @@ const LifeActionRead = (props, { LifeAction }) => {
           <div>{props.label}</div>
         </Row>
       ) : (
-        ''
+        {}
       )}
     </Col>
   );
@@ -93,11 +98,19 @@ const Life = () => {
     };
     fetchData();
   }, []);
-
   return (
     <div>
       <Row>
-        <LifeActionCreate />
+        <Button color="danger" id="toggler" style={{ marginBottom: '1rem' }}>
+          <strong>+</strong> Add New Life Insurance
+        </Button>
+        <UncontrolledCollapse toggler="#toggler">
+          <Card>
+            <CardBody>
+              <LifeActionCreate />
+            </CardBody>
+          </Card>
+        </UncontrolledCollapse>
       </Row>
       <Row style={{ marginTop: 30 }}>
         <div>
@@ -113,9 +126,6 @@ const Life = () => {
               ) : (
                 ''
               )}
-              <Row>
-                <LifeActionRead LifeAction={action} />
-              </Row>
             </div>
           ))}
         </div>
