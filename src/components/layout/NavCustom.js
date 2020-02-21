@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
-import { Link } from 'react-router-dom';
 import Logout from '../layout/Logout';
+import Logo from '../../img/logo.png';
 
 const NavCustom = props => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,14 @@ const NavCustom = props => {
       style={{ zIndex: 999, height: 70 }}
     >
       <Nav>
-        <NavItem>Service Catalogue</NavItem>
+        <img
+          alt="logo"
+          style={{ margin: '8px' }}
+          src={Logo}
+          height="40"
+          width="40"
+        />
+        <NavItem>Services Dashboard</NavItem>
       </Nav>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar onClick={toggle}>

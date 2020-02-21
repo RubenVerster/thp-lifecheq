@@ -2,29 +2,26 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import firebase from 'firebase';
 import { Container, Row, Col } from 'reactstrap';
-// import { PetInput } from '../CRUD/medActionInput';
-// import { PetCreate } from '../CRUD/PetCreate';
-const Adopt = props => {
-  // collapse toggler for MoreAboutMe Button
-  const [collapse, setCollapse] = useState(false);
-  const toggle = () => setCollapse(!collapse);
+import { TrustCrud } from '../CRUD/Crud';
 
-  //check permissions in firestore
-  //allow read and write access
-  const [medActions, setPets] = React.useState([]);
+const Trust = props => {
+  //check permissions in firestore, read and write access granted?
 
-  React.useEffect(() => {
-    const fetchData = async () => {
-      const db = firebase.firestore();
-      const data = await db.collection('actions').get();
-      setPets(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
-    };
+  // const [medActions, setPets] = React.useState([]);
 
-    fetchData();
-  }, []);
+  // React.useEffect(() => {
+  //   const fetchData = async () => {
+  //     const db = firebase.firestore();
+  //     const data = await db.collection('actions').get();
+  //     setPets(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+  //   };
+
+  //   fetchData();
+  // }, []);
+
   return (
     <Container>
-      <Row style={{ marginTop: 30 }}>
+      {/* <Row style={{ marginTop: 30 }}>
         <Col>
           <div>
             {medActions.map(action => (
@@ -32,10 +29,12 @@ const Adopt = props => {
             ))}
           </div>
         </Col>
-        <Col>{/* <PetCreate /> */}</Col>
-      </Row>
+        <Col>Hi</Col>
+      </Row> */}
+      <p>TRUST Page</p>
+      <TrustCrud />
     </Container>
   );
 };
 
-export default Adopt;
+export default Trust;

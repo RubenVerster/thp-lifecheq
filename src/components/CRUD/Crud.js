@@ -1,46 +1,46 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import firebase from 'firebase';
-import { Container, Row, Col } from 'reactstrap';
-// import { MedActionInput } from 'medActionInput';
-// import { PetCreate } from 'PetCreate';
+import { Col, Row, Container } from 'reactstrap';
+import InsuranceActionInput from '../CRUD/InsuranceActionInput';
+import InsuranceActionCreate from '../CRUD/InsuranceActionCreate';
 
-const Crud = props => {
-  // collapse toggler for MoreAboutMe Button
-  const [collapse, setCollapse] = useState(false);
-  const toggle = () => setCollapse(!collapse);
+const LifeCrud = props => {
+  //check permissions in firestore, read and write access granted?
 
-  //check permissions in firestore
-  //allow read and write access
-  const [medActions, setPets] = React.useState([]);
+  const [lifeActions, setLifeActions] = React.useState([]);
 
   React.useEffect(() => {
     const fetchData = async () => {
       const db = firebase.firestore();
-      const data = await db.collection('actions').get();
-      setPets(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+      const data = await db.collection('blanks').get();
+      setLifeActions(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
     };
-
     fetchData();
   }, []);
 
   return (
-    <Container>
-      <Row style={{ marginTop: 30 }}>
-        <Col>
-          {/* <div>
-            {medActions.map(action => (
-              <MedActionInput medAction={action} />
-            ))}
-          </div> */}
-          <h1>Eyo</h1>
-        </Col>
-        {/* <Col>
-          <PetCreate />
-        </Col> */}
-      </Row>
-    </Container>
+    <Col style={{ marginTop: 30 }}>
+      <div>
+        {lifeActions.forEach(action => (
+          // <InsuranceActionInput LifeAction={action} />
+          <Row>
+            <div>Hi</div>
+            <div>{action.name}</div>
+          </Row>
+        ))}
+      </div>
+      <Row>{/* <InsuranceActionCreate /> */}</Row>
+    </Col>
   );
 };
 
-export default Crud;
+const AidCrud = props => {
+  return <div>Aid</div>;
+};
+
+const TrustCrud = props => {
+  return <div>Trust</div>;
+};
+
+export { LifeCrud, AidCrud, TrustCrud };

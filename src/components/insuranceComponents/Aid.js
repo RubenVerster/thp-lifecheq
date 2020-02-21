@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import firebase from 'firebase';
 import { Container, Row, Col } from 'reactstrap';
-// import { PetInput } from '../CRUD/medActionInput';
-// import { PetCreate } from '../CRUD/PetCreate';
-const Adopt = props => {
+import { AidCrud } from '../CRUD/Crud';
+
+const Aid = props => {
   // collapse toggler for MoreAboutMe Button
   const [collapse, setCollapse] = useState(false);
   const toggle = () => setCollapse(!collapse);
 
-  //check permissions in firestore
-  //allow read and write access
+    //check permissions in firestore, read and write access granted?
+
   const [medActions, setPets] = React.useState([]);
 
   React.useEffect(() => {
@@ -24,18 +24,20 @@ const Adopt = props => {
   }, []);
   return (
     <Container>
-      <Row style={{ marginTop: 30 }}>
+      {/* <Row style={{ marginTop: 30 }}>
         <Col>
-          <div>
+           <div>
             {medActions.map(action => (
               <h1 medAction={action}></h1>
             ))}
           </div>
         </Col>
-        <Col>{/* <PetCreate /> */}</Col>
-      </Row>
+        <Col>{AidCrud}</Col>
+      </Row> */}
+      <p>Aid Section</p>
+      <AidCrud />
     </Container>
   );
 };
 
-export default Adopt;
+export default Aid;
