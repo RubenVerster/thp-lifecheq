@@ -7,8 +7,7 @@ import NavCustom from './NavCustom';
 import Aid from '../insuranceComponents/Aid';
 import Trust from '../insuranceComponents/Trust';
 import Life from '../insuranceComponents/Life';
-import logo from '../../img/logo.png';
-import firebase from 'firebase';
+
 class Dashboard extends Component {
   constructor(props) {
     super(props);
@@ -34,20 +33,20 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <div style={{ textAlign: 'center' }}>
+      <div>
         {/* ternary operator to conditionally render admin or login */}
         {this.state.user ? (
           <span>
             <NavCustom />
             <Container style={{ marginTop: 30 }}>
               <Row>
-                <Col md="4">
+                <Col lg="4">
                   <Aid />
                 </Col>
-                <Col md="4">
+                <Col lg="4">
                   <Trust />
                 </Col>
-                <Col md="4">
+                <Col lg="4">
                   <Life />
                 </Col>
               </Row>

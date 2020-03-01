@@ -2,6 +2,23 @@ import React, { useState } from 'react';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
 import Logout from '../layout/Logout';
 import Logo from '../../img/logo.png';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+
+const ModalExample = props => {
+  const { buttonLabel, className } = props;
+
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
+
+  return (
+    <div>
+      <Button color="danger" onClick={toggle}>
+        {buttonLabel}
+      </Button>
+    </div>
+  );
+};
 
 const NavCustom = props => {
   const [isOpen, setIsOpen] = useState(false);
